@@ -28,7 +28,7 @@ Old users are recommended to the same to keep this script functioning.
 
 3. Download the latest release:   
    - 💻 Windows: [YTchat.zip](https://github.com/iCaran/Chat-With-Youtube/releases/download/v1.0.0/YTchat.zip)    
-   - 🐧 Linux: [YT-Gist-Lin.tar.xz] (coming soon)   
+   - 🐧 Linux: [YTchat.tar.xz](https://github.com/iCaran/Chat-With-Youtube/releases/download/v1.0.0/YTchat.tar.xz)   
 
 4. Extract and run the setup script:   
    - Windows: Double-click `setup.bat`   
