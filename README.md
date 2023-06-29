@@ -4,6 +4,8 @@
 
 Similar to  as [Youtube Summarizer v2](https://github.com/iCaran/YT-Gist/tree/v2-gensim_based)
 
+https://github.com/iCaran/Chat-With-Youtube/assets/91419527/6858c879-3faa-4451-bb19-6154b6cd9dc7
+
 # v2
 - [v1](https://github.com/iCaran/Chat-With-Youtube/tree/master) uses TF-IDF based NLP summary, which is less accurate in extracting the meaning of the text, but provides shorter summaries
 - v2 uses Gensim based NLP summary, which is much more accurate in extracting the meaning of the text, but provides much larger summaries
