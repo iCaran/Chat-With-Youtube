@@ -50,3 +50,5 @@ Old users are recommended to the same to keep this script functioning.
 5. Paste that value into the file named `token.txt`   
 
 > **Warning:** Do not share your Bard token with anyone!
+---
+### There is a [v2](https://github.com/iCaran/Chat-With-Youtube/tree/gensim) available, which is for specific use cases, this version is for general purposes.
