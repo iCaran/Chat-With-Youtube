@@ -30,7 +30,7 @@ Old users are recommended to the same to keep this script functioning.
 
 3. Download the latest release:   
    - 💻 Windows: [YTchat-Gensim.zip](https://github.com/iCaran/Chat-With-Youtube/releases/download/v2.0.0/YTchat-Gensim.zip)    
-   - 🐧 Linux: [YTchat-Gensim.tar.xz] (coming soon)   
+   - 🐧 Linux: [YTchat-Gensim.tar.xz](https://github.com/iCaran/Chat-With-Youtube/releases/download/v2.0.0/YTchat-Gensim.tar.xz)   
 
 4. Extract and run the setup script:   
    - Windows: Double-click `setup.bat`   
