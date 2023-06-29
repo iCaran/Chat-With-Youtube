@@ -1,12 +1,14 @@
-# 💬 Chat with Youtube!  
+# 💬 Chat with Youtube! (v2) 
 
-#### A tool for you to go beyond just watching your Youtube videos.  
+#### A (more precise but less practical) tool for you to go beyond just watching your Youtube videos.  
 
-This tool uses [BardAPI](https://github.com/dsdanielpark/Bard-API/) to summarize any Youtube video you may give it. Apart from that, you can treat it as a normal conversation with a chatbot (Bard in this case), since that is what it essentially is.   
+Similar to  as [Youtube Summarizer v2](https://github.com/iCaran/YT-Gist/tree/v2-gensim_based)
 
-This tool is intended to be used as a research tool, where you take the topics discussed in a video, and then start a whole thread or a rabbit hole based on it, as demonstrated below:  
-
-[https://github.com/iCaran/YT-Gist/assets/91419527/0032aa87-7069-4849-acea-599ad4f2da3d](https://github.com/iCaran/Chat-With-Youtube/assets/91419527/091bc4a7-80f5-4931-a310-3507843e8c84) 
+# v2
+- [v1](https://github.com/iCaran/Chat-With-Youtube/tree/master) uses TF-IDF based NLP summary, which is less accurate in extracting the meaning of the text, but provides shorter summaries
+- v2 uses Gensim based NLP summary, which is much more accurate in extracting the meaning of the text, but provides much larger summaries
+- Overall, due to the max token size limit of any AI Chatbot (especially in free plans), larger NLP summaries as prompts will exceed the limit and will fail
+### Use this version when the video size is short and more accuracy is required
 
 ## 🔔 IMPORTANT UPDATE   
 
@@ -27,8 +29,8 @@ Old users are recommended to the same to keep this script functioning.
 2. Grab a Google Bard API access token (read how [here](https://github.com/dsdanielpark/Bard-API#readme), or see below), paste it inside `token.txt`.      
 
 3. Download the latest release:   
-   - 💻 Windows: [YTchat.zip](https://github.com/iCaran/Chat-With-Youtube/releases/download/v1.0.0/YTchat.zip)    
-   - 🐧 Linux: [YTchat.tar.xz](https://github.com/iCaran/Chat-With-Youtube/releases/download/v1.0.0/YTchat.tar.xz)   
+   - 💻 Windows: [YTchat.zip] (coming soon)    
+   - 🐧 Linux: [YTchat.tar.xz] (coming soon)   
 
 4. Extract and run the setup script:   
    - Windows: Double-click `setup.bat`   
