@@ -29,8 +29,8 @@ Old users are recommended to the same to keep this script functioning.
 2. Grab a Google Bard API access token (read how [here](https://github.com/dsdanielpark/Bard-API#readme), or see below), paste it inside `token.txt`.      
 
 3. Download the latest release:   
-   - 💻 Windows: [YTchat.zip] (coming soon)    
-   - 🐧 Linux: [YTchat.tar.xz] (coming soon)   
+   - 💻 Windows: [YTchat-Gensim.zip](https://github.com/iCaran/Chat-With-Youtube/releases/download/v2.0.0/YTchat-Gensim.zip)    
+   - 🐧 Linux: [YTchat-Gensim.tar.xz] (coming soon)   
 
 4. Extract and run the setup script:   
    - Windows: Double-click `setup.bat`   
