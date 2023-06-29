@@ -12,13 +12,10 @@ import requests
 import spacy
 from bardapi import Bard
 import os
-import sys
 import colorama
-from colorama import Fore, Style
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-import pandas as pd
+from colorama import Fore
 import re
+from gensim.summarization.summarizer import summarize as gensim_based
 
 # Specify the file path where the token is stored
 token_file_path = 'token.txt'
@@ -144,47 +141,10 @@ def get_caption(url):
 
 def summarizer(text, fraction):
     frac = fraction
-    return tfidf_based(text, frac)
 
-def tfidf_based(msg, fraction=1):
-
-    # Creating Pipeline
-    doc = nlp(msg)
-
-    # Sent_tokenize
-    sents = [sent.text for sent in doc.sents]
-
-    # Number of Sentence User wants
-    num_sent = int(np.ceil(len(sents) * fraction))
-
-    # Creating tf-idf removing the stop words matching token pattern of only text
-    tfidf = TfidfVectorizer(stop_words='english', token_pattern='(?ui)\\b\\w*[a-z]+\\w*\\b')
-    X = tfidf.fit_transform(sents)
-
-    # Creating a df with data and tf-idf value
-    df = pd.DataFrame(data=X.todense(), columns=tfidf.get_feature_names_out())
-    indexlist = list(df.sum(axis=1).sort_values(ascending=False).index)
-
-    # Assigning weights based on sentence position
-    weights = [1.0] * len(indexlist)
-    for i in range(len(indexlist)):
-        weights[i] *= 1.0 - (i / len(indexlist))  # penalty for beginning
-        weights[i] *= 1.0 - ((len(indexlist) - i - 1) / len(indexlist))  # penalty for end
-
-    # Subsetting only user needed sentence
-    num_sent = int(np.ceil(len(sents) * fraction))
-    needed = [indexlist[i] for i in np.argsort(-df.sum(axis=1) * weights)[:num_sent]]
-
-    # Sorting the document in order
-    needed.sort()
-
-    # Appending summary to a list--> convert to string --> return to user
-    summary = []
-    for i in needed:
-        summary.append(sents[i])
-    summary = "".join(summary)
-    summary = summary.replace("\n", '')
-    return summary
+    doc = nlp(text)
+    text = "\n".join([sent.text for sent in doc.sents])
+    return gensim_based(text=text, ratio=frac)
 
 def getResponse(quompt):
     try:
@@ -201,6 +161,7 @@ def ai_summary(text_to_summarize, title, flag):
     summary = getResponse(prompt+text_to_summarize)
 
     warned=0
+    # this verification thing messes up the chat history of the session
     '''
     if flag and "Response Error" not in summary:
         print(info_color + "Guessing summary accuracy based on video title...")
