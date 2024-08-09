@@ -1,4 +1,8 @@
-# 💬 Chat with Youtube!  
+# Archived!!!
+Since Bard has been replaced by Gemini and one can now use ChatGPT and other tools for free to summarize and chat with videos
+---
+
+## 💬 Chat with Youtube!  
 
 #### A tool for you to go beyond just watching your Youtube videos.  
 
